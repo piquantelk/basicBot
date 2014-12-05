@@ -176,7 +176,7 @@
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
         settings: {
-            botName: "basicBot",
+            botName: "Wolfpup",
             language: "english",
             chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
             maximumAfk: 120,
@@ -207,7 +207,7 @@
             afkRankCheck: "ambassador",
             motdEnabled: false,
             motdInterval: 5,
-            motd: "Temporary Message of the Day",
+            motd: "Fairy tales are more than true: not because they tell us that dragons exist, but because they tell us that dragons can be beaten.",
             filterChat: true,
             etaRestriction: false,
             welcome: true,
