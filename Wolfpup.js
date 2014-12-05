@@ -19,7 +19,7 @@
         var basicBotStorageInfo = {
             time: Date.now(),
             stored: true,
-            version: basicBot.version
+            version: Wolfpup.version
         };
         localStorage.setItem("basicBotStorageInfo", JSON.stringify(basicBotStorageInfo));
 
