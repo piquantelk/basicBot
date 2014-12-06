@@ -165,9 +165,9 @@
     var botCreatorIDs = [];
 
     var basicBot = {
-        version: "2.1.3",
+        version: "0.1.1",
         status: false,
-        name: "basicBot",
+        name: "wolfpup",
         loggedInID: null,
         scriptLink: "https://rawgit.com/Yemasthui/basicBot/master/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
