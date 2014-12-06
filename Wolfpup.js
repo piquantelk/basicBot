@@ -110,7 +110,7 @@
         var json_sett = null;
         var roominfo = document.getElementById("room-info");
         info = roominfo.textContent;
-        var ref_bot = "@wolfpup=";
+        var ref_bot = "@basicBot=";
         var ind_ref = info.indexOf(ref_bot);
         if (ind_ref > 0) {
             var link = info.substring(ind_ref + ref_bot.length, info.length);
@@ -167,8 +167,8 @@
     var basicBot = {
         version: "2.1.3",
         status: false,
-        name: "wolfpup",
-        loggedInID: wolfpup,
+        name: "WolfPup",
+        loggedInID: null,
         scriptLink: "https://rawgit.com/Yemasthui/basicBot/master/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
         chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
@@ -176,7 +176,7 @@
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
         settings: {
-            botName: "wolfpup",
+            botName: "basicBot",
             language: "english",
             chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
             maximumAfk: 120,
@@ -205,9 +205,9 @@
             ],
             afkpositionCheck: 15,
             afkRankCheck: "ambassador",
-            motdEnabled: true,
+            motdEnabled: false,
             motdInterval: 5,
-            motd: "Fairy tales are more than true: not because they tell us that dragons exist, but because they tell us that dragons can be beaten.",
+            motd: "Temporary Message of the Day",
             filterChat: true,
             etaRestriction: false,
             welcome: true,
@@ -1178,7 +1178,7 @@
             if (emojibutton.length > 0) {
                 emojibutton[0].click();
             }
-            loadChat(API.sendChat(subChat(wolfpup.chat.online, {botname: basicBot.settings.botName, version: basicBot.version})));
+            loadChat(API.sendChat(subChat(basicBot.chat.online, {botname: basicBot.settings.botName, version: basicBot.version})));
         },
         commands: {
             executable: function (minRank, chat) {
