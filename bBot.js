@@ -18,7 +18,7 @@
         localStorage.setItem("basicBotRoom", JSON.stringify(basicBot.room));
         var basicBotStorageInfo = {
             time: Date.now(),
-            stored: true,
+            stored: false,
             version: basicBot.version
         };
         localStorage.setItem("basicBotStorageInfo", JSON.stringify(basicBotStorageInfo));
