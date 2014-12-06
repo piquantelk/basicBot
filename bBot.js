@@ -18,7 +18,7 @@
         localStorage.setItem("basicBotRoom", JSON.stringify(basicBot.room));
         var basicBotStorageInfo = {
             time: Date.now(),
-            stored: false,
+            stored: true,
             version: basicBot.version
         };
         localStorage.setItem("basicBotStorageInfo", JSON.stringify(basicBotStorageInfo));
@@ -165,9 +165,9 @@
     var botCreatorIDs = [];
 
     var basicBot = {
-        version: "wolfpup",
+        version: "2.1.3",
         status: false,
-        name: "wolfpup",
+        name: "basicBot",
         loggedInID: null,
         scriptLink: "https://rawgit.com/Yemasthui/basicBot/master/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
@@ -205,9 +205,9 @@
             ],
             afkpositionCheck: 15,
             afkRankCheck: "ambassador",
-            motdEnabled: true,
+            motdEnabled: false,
             motdInterval: 5,
-            motd: "Fairy tales are more than true: not because they tell us that dragons exist, but because they tell us that dragons can be beaten.",
+            motd: "Temporary Message of the Day",
             filterChat: true,
             etaRestriction: false,
             welcome: true,
@@ -1173,12 +1173,12 @@
             basicBot.loggedInID = API.getUser().id;
             basicBot.status = true;
             API.sendChat('/cap 1');
-            API.setVolume(100);
+            API.setVolume(0);
             var emojibutton = $(".icon-emoji-on");
             if (emojibutton.length > 0) {
                 emojibutton[0].click();
             }
-            loadChat(API.sendChat("wolfpup V2.1.0 online!"})));
+            loadChat(API.sendChat(subChat(basicBot.chat.online, {botname: basicBot.settings.botName, version: basicBot.version})));
         },
         commands: {
             executable: function (minRank, chat) {
