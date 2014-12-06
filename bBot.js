@@ -1178,7 +1178,7 @@
             if (emojibutton.length > 0) {
                 emojibutton[0].click();
             }
-            loadChat(API.sendChat(subChat(wolfpup.chat.online, {botname: wolfpup.settings.botName, version: basicBot.version})));
+            loadChat(API.sendChat("wolfpup V2.1.0 online!"})));
         },
         commands: {
             executable: function (minRank, chat) {
